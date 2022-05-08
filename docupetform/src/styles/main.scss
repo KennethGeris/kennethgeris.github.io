@@ -1,13 +1,166 @@
-$blue: #00a0e5;
-$darkblue: #003663;
 
-$grey: #f6f6f6;
-$darkgrey: #dcdcdc;
-
-$white: #ffffff;
-$green: #34bd00;
-
+@import "./variables";
+@import "./mixins";
 
 body {
     background-color: $white;
+    margin: 0;
+    padding: 0;
 }
+
+/*Global Components Start*/
+h1 {
+    color: $darkblue;
+}
+
+.common-layout {
+    background-color: $lightgrey;
+}
+
+.justify-content{
+    &--center > div{
+        justify-content: center;
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.el-container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @include tablet {
+        max-width: 600px;
+    }
+    
+    @include desktop {
+        max-width: 1024px;
+    }
+}
+
+.el-header {
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    padding: 45px 0 15px !important;
+    height: 110px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+
+.navbar-wrapper {
+    width: 100%;
+    .navbar-menu {
+        margin-top: 10px;
+
+        @include tablet {
+            position: absolute;
+            right: 15px;
+        }
+
+        .menu-item {
+            margin: 0 10px;
+            text-decoration: none;
+            color: $textColor;
+            &--blue {
+                color: $blue;
+            }
+        }
+
+
+    }
+    
+}
+
+.el-main {
+    padding: 50px 0 10px !important;
+}
+
+.el-footer{
+    text-align: center;
+    padding-bottom: -20px;
+    p{
+        margin: 35px 0 0;
+    }
+}
+/*Global Components End*/
+
+/*Contact Form Start*/
+.el-card__body {
+    @include tablet {
+        padding: 30px 60px !important;
+    }
+}
+
+.el-form {
+    .el-form-item__label {
+        font-weight: bold;
+        margin-bottom: 5px !important;
+    }
+
+
+
+    .el-radio-group { 
+        &.radio-group--inner{
+            flex-direction: column;
+            align-items: normal !important;
+        }
+        
+        .el-radio__inner{
+            width: 30px !important;
+            height: 30px !important;
+            background-color: $darkgrey;
+            &::after {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        .el-radio-button__inner {
+            border-color: $blue !important;
+            color: $blue;
+            padding: 12px 25px;
+            width: 100px;
+            color: $blue !important;
+        }
+
+        .el-radio-button__original-radio:checked+{
+            .el-radio-button__inner {
+                color: $white !important;
+            }
+        }
+    }
+
+    .el-button{
+        &.is-round {
+            border-radius: 4px !important;
+            width: 200px;
+            height: 50px;
+            font-size: 19px;
+            margin-top: 35px;
+        }
+    }
+
+
+}
+/*Contact Form End*/
