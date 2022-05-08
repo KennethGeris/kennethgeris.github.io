@@ -144,9 +144,13 @@ h1 {
             color: $blue !important;
         }
 
-        .el-radio-button__original-radio:checked+{
-            .el-radio-button__inner {
+        .el-radio.is-checked{
+            .el-radio__inner {
                 color: $white !important;
+                background-color: $blue !important;
+            }
+            .el-radio__label {
+                color: $textColor;
             }
         }
     }
