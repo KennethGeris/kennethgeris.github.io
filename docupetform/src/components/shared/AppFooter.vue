@@ -1,7 +1,7 @@
 <template>
-	<footer>
+	<el-footer>
 		<p>Footer TBD</p>
-	</footer>
+	</el-footer>
 </template>
 <script>
 export default {
