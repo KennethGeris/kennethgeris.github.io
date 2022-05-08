@@ -177,3 +177,21 @@ h1 {
 
 }
 /*Contact Form End*/
+
+/*Paw Progress Start*/
+.paw-progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        width: 30px;
+        &:nth-of-type(even){
+            margin-top: 15px;
+        }
+        &.active{
+            filter: invert(49%) sepia(79%) saturate(1340%) hue-rotate(66deg) brightness(98%) contrast(104%);
+        }
+    }
+}
+/*Paw Progress End*/

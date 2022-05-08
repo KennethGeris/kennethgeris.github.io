@@ -3,13 +3,7 @@
 		<el-col :xs="24" :sm="16" :md="14">
 			<el-card>
 				<el-form v-model="form" label-position="top" size="large">
-					<!--Ideally this is a progress bar-->
-					<el-image
-						class="progress"
-						src="https://via.placeholder.com/600x65?text=Paw Progress Placeholder"
-						fit="contain"
-						alt="paw progress"
-					/>
+					<PawProgress :max="7" :active="2" />
 
 					<h1>Tell us about your pet</h1>
 
@@ -82,11 +76,13 @@
 </template>
 <script setup>
 import { Search } from "@element-plus/icons-vue";
+import PawProgress from "./PawProgress.vue";
 </script>
 <script>
 export default {
 	/* eslint-disable */
 	name: "ContactForm",
+	components: PawProgress,
 	data: () => ({
 		form: {
 			name: "",
