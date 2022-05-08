@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   css: {
     loaderOptions: {
-      sass: {}
+      scss: {}
     }
   }
 })
