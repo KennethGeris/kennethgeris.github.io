@@ -136,18 +136,27 @@ h1 {
             }
         }
 
+        .el-radio-button.is-active {
+            .el-radio-button__inner {
+                color: $white;
+            }
+            
+        }
         .el-radio-button__inner {
             border-color: $blue !important;
             color: $blue;
             padding: 12px 25px;
             width: 100px;
-            color: $blue !important;
+            color: $blue;
         }
 
         .el-radio.is-checked{
             .el-radio__inner {
                 color: $white !important;
                 background-color: $blue !important;
+            }
+            .el-radio-button__inner {
+                color: $white !important;
             }
             .el-radio__label {
                 color: $textColor;
